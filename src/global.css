@@ -1,0 +1,55 @@
+:root {
+  --dark-gray: #1e1e1e;
+  --dark-blue: #21243d;
+  --medium-blue: #142850;
+  --light-blue: #edf7fa;
+
+  --black: #000000;
+  --white: #f2f2f2;
+  --page-width: 80%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 900;
+}
+
+body,
+a,
+input {
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: 0;
+}
+
+section {
+  height: 100vh;
+  margin: 0 auto;
+  width: var(--page-width);
+}
+
+section:first-child {
+  height: calc(100vh - 30px - (42px * 2));
+}

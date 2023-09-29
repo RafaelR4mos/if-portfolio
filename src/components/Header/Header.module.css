@@ -1,0 +1,18 @@
+.headerContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2.625rem auto;
+  width: 80%;
+}
+
+.headerContainer nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.headerContainer nav a {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
