@@ -4,51 +4,42 @@ import {
   InstagramLogo,
   LinkedinLogo,
 } from "@phosphor-icons/react";
+import { socialMedia } from "../../types/userInterface";
+
 import styles from "./Footer.module.css";
 
-type socialMediaLink = {
-  socialMedia: "github" | "linkedin" | "instagram" | "facebook";
-  link: string;
-};
-
 interface FooterProps {
-  socialMediaLinks?: socialMediaLink[];
+  socialMediaLinks?: socialMedia;
 }
 
 export function Footer({ socialMediaLinks }: FooterProps) {
+  console.log(socialMediaLinks);
+
   return (
     <footer>
       {socialMediaLinks ? (
         <div className={styles.footerIconContainer}>
-          {socialMediaLinks.some(
-            (socialMediaLink) => socialMediaLink.socialMedia === "facebook"
-          ) && (
-            <a href="" target="_blank">
-              <FacebookLogo size={32} />
+          {socialMediaLinks["facebook"] && (
+            <a href={socialMediaLinks.facebook} target="_blank">
+              <FacebookLogo size={32} alt="facebook logo" />
             </a>
           )}
 
-          {socialMediaLinks.some(
-            (socialMediaLink) => socialMediaLink.socialMedia === "instagram"
-          ) && (
-            <a href="" target="_blank">
-              <InstagramLogo size={32} />
+          {socialMediaLinks["instagram"] && (
+            <a href={socialMediaLinks.instagram} target="_blank">
+              <InstagramLogo size={32} alt="instagram logo" />
             </a>
           )}
 
-          {socialMediaLinks.some(
-            (socialMediaLink) => socialMediaLink.socialMedia === "linkedin"
-          ) && (
-            <a href="" target="_blank">
-              <LinkedinLogo size={32} />
+          {socialMediaLinks["linkedin"] && (
+            <a href={socialMediaLinks.linkedin} target="_blank">
+              <LinkedinLogo size={32} alt="linkedin logo" />
             </a>
           )}
 
-          {socialMediaLinks.some(
-            (socialMediaLink) => socialMediaLink.socialMedia === "github"
-          ) && (
-            <a href="" target="_blank">
-              <GithubLogo size={32} />
+          {socialMediaLinks["github"] && (
+            <a href={socialMediaLinks.github} target="_blank">
+              <GithubLogo size={32} alt="github logo" />
             </a>
           )}
         </div>

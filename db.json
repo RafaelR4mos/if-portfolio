@@ -1,0 +1,46 @@
+{
+  "userData": {
+    "name": "Fulana",
+    "occupation": "Front-end developer",
+    "shortDescription": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+    "email": "fulana@email.com",
+    "projects": [
+      {
+        "id": 1,
+        "title": "Titulo do projeto 1",
+        "year": 2020,
+        "category": "Dashboard",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laudantium, magni sapiente distinctio incidunt voluptates Exercitationem laudantium, magni sapiente distinctio incidunt voluptates.",
+        "repoURL": "https://github.com/repo1",
+        "deployURL": "https://meu-site1.com",
+        "projectImgSrc": "/porfolioImgs/projeto-1.png"
+      },
+      {
+        "id": 2,
+        "title": "Titulo do projeto 2",
+        "year": 2021,
+        "category": "Dashboard",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laudantium, magni sapiente distinctio incidunt voluptates Exercitationem laudantium, magni sapiente distinctio incidunt voluptates.",
+        "repoURL": "https://github.com/repo1",
+        "deployURL": "https://meu-site1.com",
+        "projectImgSrc": "/porfolioImgs/projeto-2.png"
+      },
+      {
+        "id": 3,
+        "title": "Titulo do projeto 3",
+        "year": 2023,
+        "category": "CRM",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laudantium, magni sapiente distinctio incidunt voluptates Exercitationem laudantium, magni sapiente distinctio incidunt voluptates.",
+        "repoURL": "https://github.com/repo1",
+        "deployURL": "https://meu-site1.com",
+        "projectImgSrc": "/porfolioImgs/projeto-3.png"
+      }
+    ],
+    "socialMediaLink": {
+      "github": "https://github.com",
+      "linkedin": "https://linked.in.com",
+      "instagram": "https://instagram.com/aa",
+      "facebook": "https://facebook.com"
+    }
+  }
+}

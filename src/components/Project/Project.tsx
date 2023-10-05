@@ -1,24 +1,26 @@
 import { Broadcast } from "@phosphor-icons/react/dist/ssr/Broadcast";
-import styles from "./Project.module.css";
 import { GithubLogo } from "@phosphor-icons/react";
+import styles from "./Project.module.css";
 
 interface projectDataProps {
   projectData: {
     title: string;
+    year: number;
     category: string;
     description: string;
-    repoLink: string;
-    deployLink?: string;
-    imgURL: string;
-    date: string;
+    repoURL: string;
+    deployURL?: string;
+    projectImgSrc: string;
   };
 }
 
 export function Project({ projectData }: projectDataProps) {
+  console.log(projectData);
+
   return (
     <div className={styles.projectContainer}>
       <div className={styles.imgContainer}>
-        <img src={projectData.imgURL} />
+        <img src={projectData.projectImgSrc} />
       </div>
       <div className={styles.textContainer}>
         <div className={styles.textContainer}>
@@ -26,8 +28,10 @@ export function Project({ projectData }: projectDataProps) {
             <strong className={styles.projectTitle}>{projectData.title}</strong>
           </div>
           <div className={styles.yearCategoryContainer}>
-            <span className={styles.projectYear}>2020</span>
-            <span className={styles.projectCategory}>Dashboard</span>
+            <span className={styles.projectYear}>{projectData.year}</span>
+            <span className={styles.projectCategory}>
+              {projectData.category}
+            </span>
           </div>
           <p className={styles.projectDescription}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -36,20 +40,18 @@ export function Project({ projectData }: projectDataProps) {
             incidunt voluptates.
           </p>
           <div className={styles.projectBtnContainer}>
-            <a href={projectData.repoLink} target="_blank">
+            <a href={projectData.repoURL} target="_blank">
               <GithubLogo size={30} alt="Logo do github" />
               repo
             </a>
             <a
-              href={projectData.deployLink ? projectData.deployLink : "#"}
-              className={projectData.deployLink ? "" : styles.deployInnactive}
+              href={projectData.deployURL ? projectData.deployURL : "#"}
+              className={projectData.deployURL ? "" : styles.deployInnactive}
               target="_blank"
-              title={
-                projectData.deployLink ? "" : "deploy não disponível ainda"
-              }
+              title={projectData.deployURL ? "" : "deploy não disponível ainda"}
             >
               <Broadcast size={30} alt="ícone representando deploy" />
-              {projectData.deployLink ? "deploy" : "breve"}
+              {projectData.deployURL ? "deploy" : "breve"}
             </a>
           </div>
         </div>

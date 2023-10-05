@@ -4,9 +4,9 @@ export function Header() {
   return (
     <header className={styles.headerContainer}>
       <nav>
-        <a href="#">Início</a>
-        <a href="#">Projeto</a>
-        <a href="#">Contato</a>
+        <a href="#hero-section">Início</a>
+        <a href="#projetos-section">Projetos</a>
+        <a href="#contato-section">Contato</a>
       </nav>
     </header>
   );

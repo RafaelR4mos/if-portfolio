@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styles from "./app.module.css";
 import pdf from "./assets/curriculo.pdf";
 import emailImg from "./assets/email.svg";
@@ -9,65 +10,65 @@ import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Project } from "./components/Project/Project";
 import { FileText } from "@phosphor-icons/react";
+import { IuserData } from "./types/userInterface";
 
 function App() {
-  const projectData = {
-    title: "Titulo projeto",
-    category: "lalala",
-    description:
-      "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
-    repoLink: "https://github.com",
-    deployLink: "https://umdeplpoy.com",
-    imgURL: "/project-img.png",
-    date: "01/01/2000",
-  };
+  const [user, setUser] = useState<IuserData | null>(null);
 
-  const projectData2 = {
-    title: "Titulo projeto",
-    category: "lalala",
-    description:
-      "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
-    repoLink: "https://github.com",
-    deployLink: "",
-    imgURL: "/project-img.png",
-    date: "01/01/2000",
-  };
+  async function getUserData() {
+    try {
+      const response = await fetch("../db.json");
+      const data = await response.json();
+
+      setUser(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    getUserData();
+  }, []);
 
   return (
     <>
       <Header />
       <main>
-        <section className={styles.heroSection}>
+        <section className={styles.heroSection} id="hero-section">
           <div className={styles.textContainer}>
             <h1>
-              Olá, eu sou Fulana, <br />
-              Front-end developer
+              Olá, eu sou {user?.userData.name}, <br />
+              {user?.userData.occupation}
             </h1>
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
+            <p>{user?.userData.shortDescription}</p>
             <a href={pdf} download className={styles.curriculumBtn}>
               <FileText size={30} />
               Baixar currículo
             </a>
           </div>
           <div className={styles.imgContainer}>
-            <AvatarImg imgSrc={imgSrc} alt="foto de um homem branco" />
+            <AvatarImg
+              imgSrc={imgSrc}
+              alt="foto de uma mulher de capuz e óculos"
+            />
           </div>
         </section>
 
-        <section>
+        <section className={styles.projectSection} id="projetos-section">
           <h2>Projetos em destaque</h2>
 
           <div className={styles.projectsContainer}>
-            <Project projectData={projectData} />
-            <Project projectData={projectData2} />
+            {user?.userData.projects ? (
+              user.userData.projects.map((project) => (
+                <Project key={project.id} projectData={project} />
+              ))
+            ) : (
+              <span>Nenhum projeto foi encontrado</span>
+            )}
           </div>
         </section>
 
-        <section className={styles.contactSection}>
+        <section className={styles.contactSection} id="contato-section">
           <h2>Entre em contato</h2>
           <img
             src={emailImg}
@@ -76,7 +77,7 @@ function App() {
           />
 
           <div className={styles.contactBoxContainer}>
-            <div className={styles.contactBox}>email@email.com</div>
+            <div className={styles.contactBox}>{user?.userData.email}</div>
             <div className={styles.contactBox} data-iscopy="true">
               Copiar e-mail
             </div>
@@ -84,7 +85,7 @@ function App() {
         </section>
       </main>
 
-      <Footer />
+      <Footer socialMediaLinks={user?.userData.socialMediaLink} />
     </>
   );
 }

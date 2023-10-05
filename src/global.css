@@ -17,6 +17,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Heebo", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -61,10 +62,6 @@ section {
   height: 100vh;
   margin: 0 auto;
   width: var(--page-width);
-}
-
-section:first-child {
-  height: calc(100vh - 30px - (42px * 2));
 }
 
 @media (max-width: 1100px) {

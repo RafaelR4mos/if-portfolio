@@ -4,6 +4,7 @@
   align-items: center;
   grid-template-columns: 0.5fr 0.5fr;
   gap: 3rem;
+  height: calc(100vh - 30px - (42px * 2));
 }
 
 .textContainer {
@@ -41,6 +42,11 @@
 
 .imgContainer {
   margin: 0 0 0 auto;
+}
+
+.projectSection {
+  margin: 4rem auto;
+  height: 100%;
 }
 
 .projectsContainer {
