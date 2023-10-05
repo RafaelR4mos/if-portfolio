@@ -28,6 +28,7 @@
 
 .projectTitle {
   font-size: 1.875rem;
+  color: var(--primary);
 }
 
 .yearCategoryContainer {
@@ -43,14 +44,14 @@
   border-radius: 16px;
   padding: 0.1rem 0.6rem;
 
-  background-color: var(--medium-blue);
+  background-color: var(--accent);
+  color: white;
 
-  color: var(--white);
   font-weight: 700;
 }
 
 .projectCategory {
-  color: var(--dark-gray);
+  color: var(--primary);
 }
 
 .projectDescription {
@@ -70,7 +71,7 @@
   justify-content: center;
   padding: 0.25rem 0.8rem;
   gap: 0.5rem;
-  border: 1px solid var(--black-neutral);
+  border: 1px solid var(--primary);
   border-radius: 4px;
   font-weight: 500;
   text-transform: capitalize;
@@ -78,7 +79,7 @@
 }
 
 .projectBtnContainer > a:not(.deployInnactive):hover {
-  background-color: var(--black);
+  background-color: var(--primary);
   color: var(--white);
 }
 
@@ -89,6 +90,6 @@
 }
 
 .deployInnactive > a:hover {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--primary);
+  color: var(--white);
 }

@@ -1,0 +1,12 @@
+footer {
+  background-color: var(--background);
+  padding: 2rem 1rem;
+}
+
+.footerIconContainer {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
