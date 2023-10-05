@@ -1,0 +1,94 @@
+.projectContainer {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.imgContainer {
+  min-width: 250px;
+  align-self: stretch;
+  aspect-ratio: 1 / 1;
+}
+
+.imgContainer img {
+  height: 100%;
+  max-width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 16 / 11;
+  object-fit: fill;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  gap: 1.25rem;
+}
+
+.projectTitle {
+  font-size: 1.875rem;
+}
+
+.yearCategoryContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.projectYear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 0.1rem 0.6rem;
+
+  background-color: var(--medium-blue);
+
+  color: var(--white);
+  font-weight: 700;
+}
+
+.projectCategory {
+  color: var(--dark-gray);
+}
+
+.projectDescription {
+  font-size: 1.125rem;
+  text-align: justify;
+}
+
+.projectBtnContainer {
+  display: flex;
+  justify-self: flex-end;
+  gap: 1.75rem;
+}
+
+.projectBtnContainer > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.8rem;
+  gap: 0.5rem;
+  border: 1px solid var(--black-neutral);
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+
+.projectBtnContainer > a:not(.deployInnactive):hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.deployInnactive {
+  opacity: 0.4;
+  cursor: default;
+  transform: none;
+}
+
+.deployInnactive > a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}

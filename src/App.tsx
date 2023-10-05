@@ -3,10 +3,33 @@ import { Header } from "./components/Header/Header";
 
 import styles from "./app.module.css";
 import pdf from "./assets/curriculo.pdf";
+import { Project } from "./components/Project/Project";
 const imgSrc =
   "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80";
 
 function App() {
+  const projectData = {
+    title: "Titulo projeto",
+    category: "lalala",
+    description:
+      "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+    repoLink: "https://github.com",
+    deployLink: "https://umdeplpoy.com",
+    imgURL: "/project-img.png",
+    date: "01/01/2000",
+  };
+
+  const projectData2 = {
+    title: "Titulo projeto",
+    category: "lalala",
+    description:
+      "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+    repoLink: "https://github.com",
+    deployLink: "",
+    imgURL: "/project-img.png",
+    date: "01/01/2000",
+  };
+
   return (
     <>
       <Header />
@@ -33,6 +56,11 @@ function App() {
 
         <section>
           <h2>Projetos em destaque</h2>
+
+          <div className={styles.projectsContainer}>
+            <Project projectData={projectData} />
+            <Project projectData={projectData2} />
+          </div>
         </section>
       </main>
     </>

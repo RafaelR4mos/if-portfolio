@@ -5,7 +5,9 @@
   --light-blue: #edf7fa;
 
   --black: #000000;
+  --black-neutral: #1e1e1e;
   --white: #f2f2f2;
+  --dark-gray: #505050;
   --page-width: 80%;
 }
 
@@ -14,6 +16,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Heebo", sans-serif;
+}
+
+body {
+  background-color: var(--white);
 }
 
 h1 {
