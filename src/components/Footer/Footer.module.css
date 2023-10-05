@@ -10,3 +10,12 @@ footer {
   justify-content: center;
   gap: 2rem;
 }
+
+.footerIconContainer > a {
+  transform: all 0.3s;
+}
+
+.footerIconContainer > a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
