@@ -1,9 +1,9 @@
 {
   "userData": {
-    "name": "Fulana",
-    "occupation": "Front-end developer",
-    "shortDescription": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-    "email": "fulana@email.com",
+    "name": "<seu nome>",
+    "occupation": "<sua ocupação>",
+    "shortDescription": "<Uma descrição não tão longa, mas também não tão pequena. Contando um pouco sobre as principais tecnologias em que você trabalha>",
+    "email": "seuemail@email.com",
     "projects": [
       {
         "id": 1,
@@ -37,10 +37,10 @@
       }
     ],
     "socialMediaLink": {
-      "github": "https://github.com",
-      "linkedin": "https://linked.in.com",
-      "instagram": "https://instagram.com/aa",
-      "facebook": "https://facebook.com"
+      "github": "https://link-do-seu-github",
+      "linkedin": "https://link-do-seu-linkedin",
+      "instagram": "https://link-do-seu-instagram",
+      "facebook": "https://link-do-seu-facebook"
     }
   }
 }

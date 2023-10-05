@@ -24,6 +24,14 @@ body {
   background-color: var(--background);
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
 h1 {
   font-size: 2.75rem;
   font-weight: 900;
