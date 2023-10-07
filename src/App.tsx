@@ -10,7 +10,7 @@ import { Alert } from "@mui/material";
 import emailImg from "/assets/img/email.svg";
 import styles from "./styles/app.module.css";
 
-import curriculumPdf from "/assets/curriculo.pdf"; //Linke seu curriculo aqui
+import curriculumPdf from "/assets/curriculo/curriculo.pdf"; //Linke seu curriculo aqui
 import portfolioProfileImg from "/assets/portfolio-profile-img.jpg"; //Linke sua imagem de perfil aqui
 
 function App() {
