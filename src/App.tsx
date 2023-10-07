@@ -1,19 +1,29 @@
-import { useEffect, useState } from "react";
-import styles from "./app.module.css";
-import pdf from "./assets/curriculo.pdf";
-import emailImg from "./assets/email.svg";
-const imgSrc =
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80";
-
+import { useEffect, useRef, useState } from "react";
 import { AvatarImg } from "./components/AvatarImg/AvatarImg";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Project } from "./components/Project/Project";
 import { FileText } from "@phosphor-icons/react";
 import { IuserData } from "./types/userInterface";
+import { Alert } from "@mui/material";
+
+import emailImg from "/assets/img/email.svg";
+import styles from "./styles/app.module.css";
+
+import curriculumPdf from "/assets/curriculo.pdf"; //Linke seu curriculo aqui
+import portfolioProfileImg from "/assets/portfolio-profile-img.jpg"; //Linke sua imagem de perfil aqui
 
 function App() {
   const [user, setUser] = useState<IuserData | null>(null);
+  const [isCopy, setIsCopy] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const inputRef = useRef<any>(null);
+
+  function handleCopyEmail() {
+    const emailValue = inputRef.current ? inputRef.current.textContent : "";
+    navigator.clipboard.writeText(String(emailValue));
+    setIsCopy(true);
+  }
 
   async function getUserData() {
     try {
@@ -41,14 +51,14 @@ function App() {
               {user?.userData.occupation}
             </h1>
             <p>{user?.userData.shortDescription}</p>
-            <a href={pdf} download className={styles.curriculumBtn}>
+            <a href={curriculumPdf} download className={styles.curriculumBtn}>
               <FileText size={30} />
               Baixar currículo
             </a>
           </div>
           <div className={styles.imgContainer}>
             <AvatarImg
-              imgSrc={imgSrc}
+              imgSrc={portfolioProfileImg}
               alt="foto de uma mulher de capuz e óculos"
             />
           </div>
@@ -70,6 +80,7 @@ function App() {
 
         <section className={styles.contactSection} id="contato-section">
           <h2>Entre em contato</h2>
+
           <img
             src={emailImg}
             className={styles.contactEmailImg}
@@ -77,8 +88,19 @@ function App() {
           />
 
           <div className={styles.contactBoxContainer}>
-            <div className={styles.contactBox}>{user?.userData.email}</div>
-            <div className={styles.contactBox} data-iscopy="true">
+            {isCopy && (
+              <Alert onClose={() => setIsCopy(false)}>
+                Texto copiado com sucesso!
+              </Alert>
+            )}
+            <div className={styles.contactBox} ref={inputRef}>
+              {user?.userData.email}
+            </div>
+            <div
+              className={styles.contactBox}
+              onClick={handleCopyEmail}
+              data-iscopy="true"
+            >
               Copiar e-mail
             </div>
           </div>

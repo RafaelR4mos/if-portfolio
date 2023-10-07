@@ -1,15 +1,5 @@
 :root {
   --page-width: 80%;
-
-  --text: #130b23;
-  --background: #f9f8fc;
-
-  --primary: #2d1b50;
-  --secondary: #eae4f6;
-  --accent: #754bc3;
-
-  --white: #ffffff;
-  --black: #000000;
 }
 
 * {
