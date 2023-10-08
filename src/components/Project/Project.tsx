@@ -33,12 +33,7 @@ export function Project({ projectData }: projectDataProps) {
               {projectData.category}
             </span>
           </div>
-          <p className={styles.projectDescription}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem laudantium, magni sapiente distinctio incidunt
-            voluptates Exercitationem laudantium, magni sapiente distinctio
-            incidunt voluptates.
-          </p>
+          <p className={styles.projectDescription}>{projectData.description}</p>
           <div className={styles.projectBtnContainer}>
             <a href={projectData.repoURL} target="_blank">
               <GithubLogo size={30} alt="Logo do github" />
