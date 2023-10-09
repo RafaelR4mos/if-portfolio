@@ -24,6 +24,8 @@ Caso não tenha estas 2 ferramentas instale:
 
 - **Instale o NODE** -> [siteNode](https://nodejs.org/en). Baixe a **versão LTS** do instalador do seu sistema operacional.
 
+---
+
 ### 💹 Recuperando o projeto
 
 - 📂Via zip
@@ -49,6 +51,8 @@ npm run dev
 
 //clique no link gerado como "localhost"
 ```
+
+---
 
 ### 🎨 Deixando o projeto com a sua cara
 
@@ -102,6 +106,8 @@ npm run dev
 5. Para adicionar o seu currículo, arraste o arquivo .pdf com nome **curriculo.pdf** para a pasta `public > assets > curriculo`.
 
 > Pronto! Agora o portfólio está com a sua cara.
+
+---
 
 ### ⚙ Fazendo o deploy do projeto
 
