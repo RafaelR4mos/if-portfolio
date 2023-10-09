@@ -20,3 +20,9 @@
 .headerContainer nav a:hover {
   box-shadow: inset 0px -2px 0px 0px var(--accent);
 }
+
+@media screen and (max-width: 425px) {
+  .headerContainer{
+    justify-content: center;
+  }
+}

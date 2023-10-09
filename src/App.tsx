@@ -12,6 +12,8 @@ import styles from "./styles/app.module.css";
 
 import curriculumPdf from "/assets/curriculo/curriculo.pdf"; //Linke seu curriculo aqui
 import portfolioProfileImg from "/assets/portfolio-profile-img.jpg"; //Linke sua imagem de perfil aqui
+import AnimatedCursor from "./components/AnimatedCursor/AnimatedCursor";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   const [user, setUser] = useState<IuserData | null>(null);
@@ -48,7 +50,9 @@ function App() {
           <div className={styles.textContainer}>
             <h1>
               Olá, eu sou {user?.userData.name}, <br />
+              <AnimatedCursor backLetters={4} speed={50}>
               {user?.userData.occupation}
+              </AnimatedCursor>
             </h1>
             <p>{user?.userData.shortDescription}</p>
             <a href={curriculumPdf} download className={styles.curriculumBtn}>
@@ -63,6 +67,8 @@ function App() {
             />
           </div>
         </section>
+
+        <ScrollToTop/>
 
         <section className={styles.projectSection} id="projetos-section">
           <h2>Projetos em destaque</h2>

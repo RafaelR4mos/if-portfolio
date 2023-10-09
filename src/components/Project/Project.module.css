@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 425px) {
+  .projectContainer{
+    flex-direction: column;
+  }
+}
+
 .imgContainer {
   min-width: 250px;
   align-self: stretch;
