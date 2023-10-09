@@ -6,7 +6,7 @@ Seja bem-vindo a oficina construindo um Portfólio dinâmico com react.
 
 ## Sumário
 
-- [Instalações](#instalacoes)
+- [Instalações](#instalações)
 - [Recuperando o Projeto](#-recuperando-o-projeto)
 - [Deixando o projeto com sua cara](#-deixando-o-projeto-com-a-sua-cara)
 - [Deploy do Projeto](#-fazendo-o-deploy-do-projeto)
