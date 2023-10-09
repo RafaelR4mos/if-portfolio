@@ -4,6 +4,13 @@ por: `Rafael Ramos` e `Felipe Scheffer`
 
 Seja bem-vindo a oficina construindo um Portfólio dinâmico com react.
 
+## Sumário
+
+- [Instalações](#instalacoes)
+- [Recuperando o Projeto](#💹-recuperando-o-projeto)
+- [Deixando o projeto com sua cara](#🎨-deixando-o-projeto-com-a-sua-cara)
+- [Deploy do Projeto](#⚙-fazendo-o-deploy-do-projeto)
+
 <img src="./public//assets/img/semana-acadêmica-banner.png"/>
 
 ## Para utilizar o projeto
@@ -12,13 +19,14 @@ Seja bem-vindo a oficina construindo um Portfólio dinâmico com react.
 
 Caso não tenha estas 2 ferramentas instale:
 
-- Instale o VSCode -> [vsCodeLink](https://code.visualstudio.com/). Escolha o instalador do seu sistema operacional e siga o processo de instalação
+- **Instale o VSCode** -> [vsCodeLink](https://code.visualstudio.com/).
+  Escolha o instalador do seu sistema operacional e siga o processo de instalação
 
-- Instale o NODE -> [siteNode](https://nodejs.org/en). Baixe a versão LTS do instalador do seu sistema operacional.
+- **Instale o NODE** -> [siteNode](https://nodejs.org/en). Baixe a **versão LTS** do instalador do seu sistema operacional.
 
-### Recuperando o projeto
+### 💹 Recuperando o projeto
 
-- Via zip
+- 📂Via zip
 
 1.  Clique no botão verde "code" e faça download como ZIP do projeto.
 
@@ -34,9 +42,7 @@ Caso não tenha estas 2 ferramentas instale:
 npm i
 ```
 
-6. Espere instalar todas as dependências.
-
-7. Se não retornar nenhum erro, rode o comando abaixo para executar o projeto.
+6. Se não retornar nenhum erro, rode o comando abaixo para executar o projeto.
 
 ```
 npm run dev
@@ -44,11 +50,11 @@ npm run dev
 //clique no link gerado como "localhost"
 ```
 
-### Deixando o projeto com a sua cara
+### 🎨 Deixando o projeto com a sua cara
 
 1. Acesse o arquivo **theme.css** em: `styles > theme.css`. Você encontrará algo assim:
 
-```
+```css
 :root {
   --text: #130b23;
   --background: #f9f8fc;
@@ -92,3 +98,27 @@ npm run dev
     "projects": []
   }
 ```
+
+5. Para adicionar o seu currículo, arraste o arquivo .pdf com nome **curriculo.pdf** para a pasta `public > assets > curriculo`.
+
+> Pronto! Agora o portfólio está com a sua cara.
+
+### ⚙ Fazendo o deploy do projeto
+
+Agora só falta colocar o seu projeto no ar para gerar um link.
+
+Vamos utilizar o **Vercel** para isso, mas primeiro **Suba o seu projeto, agora com a sua cara, para um repositório do github.**
+
+1. Acesse o site: [Vercel](https://vercel.com/)
+
+2. Crie uma conta e linke **com a sua do Github**
+
+3. Após isso, vá para o dashboard e clique no botão **"Add New" > Project**.
+
+4. Selecione o repositório do seu portfólio
+
+5. Se quiser, altere o nome do projeto e, em seguida, **clique em "Deploy"**.
+
+6. Aguarde completar o processo de build do projeto.
+
+7. Após finalizado o processo você pode conferir o seu portfólio e **compartilhar o link com qualquer um!** 🤩
