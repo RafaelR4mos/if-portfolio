@@ -107,7 +107,7 @@ npm run dev
 
 5. Para adicionar o seu currículo, arraste o arquivo .pdf com nome **curriculo.pdf** para a pasta `public > assets > curriculo`.
 
-5.1 Confira no arquivo em `src > app.tsx` se o `import` de nome `curriculumPdf` aponta para o seu arquivo pdf corretamente.
+6. Confira no arquivo em `src > app.tsx` se o `import` de nome `curriculumPdf` aponta para o seu arquivo pdf corretamente.
 
 ```
 //para um arquivo de nome "curriculo" com extensão ".pdf" esta é a importação correta:
@@ -116,9 +116,9 @@ npm run dev
 import curriculumPdf from "/assets/curriculo/curriculo.pdf"; //Linke seu curriculo aqui
 ```
 
-6. Para adicionar a sua foto de perfil no portfólio, arraste o arquivo da sua foto para a pasta `public > assets`
+7. Para adicionar a sua foto de perfil no portfólio, arraste o arquivo da sua foto para a pasta `public > assets`
 
-6.1. Confira no arquivo em `src > app.tsx` se o `import` de nome `portfolioProfileImg` aponta para a sua imagem com o nome correto do arquivo e extensão.
+8. Confira no arquivo em `src > app.tsx` se o `import` de nome `portfolioProfileImg` aponta para a sua imagem com o nome correto do arquivo e extensão.
 
 ```jsx
 //para um arquivo de nome "portfolio-profile-img" com extensão ".jpg" esta é a importação correta:
