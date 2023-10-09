@@ -4,6 +4,8 @@ por: `Rafael Ramos` e `Felipe Scheffer`
 
 Seja bem-vindo a oficina construindo um Portfólio dinâmico com react.
 
+Link PPT Oficina: [Canva - IF React - Semana acadêmica](#)
+
 ## Sumário
 
 - [Instalações](#instalações)
