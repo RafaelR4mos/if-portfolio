@@ -7,9 +7,9 @@ Seja bem-vindo a oficina construindo um Portfólio dinâmico com react.
 ## Sumário
 
 - [Instalações](#instalacoes)
-- [Recuperando o Projeto](#💹-recuperando-o-projeto)
-- [Deixando o projeto com sua cara](#🎨-deixando-o-projeto-com-a-sua-cara)
-- [Deploy do Projeto](#⚙-fazendo-o-deploy-do-projeto)
+- [Recuperando o Projeto](#-recuperando-o-projeto)
+- [Deixando o projeto com sua cara](#-deixando-o-projeto-com-a-sua-cara)
+- [Deploy do Projeto](#-fazendo-o-deploy-do-projeto)
 
 <img src="./public//assets/img/semana-acadêmica-banner.png"/>
 
