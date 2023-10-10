@@ -1,6 +1,7 @@
 import { Broadcast } from "@phosphor-icons/react/dist/ssr/Broadcast";
 import { GithubLogo } from "@phosphor-icons/react";
 import styles from "./Project.module.css";
+import AnimatedCursor from "../AnimatedCursor/AnimatedCursor";
 
 interface projectDataProps {
   projectData: {
@@ -25,7 +26,11 @@ export function Project({ projectData }: projectDataProps) {
       <div className={styles.textContainer}>
         <div className={styles.textContainer}>
           <div>
-            <strong className={styles.projectTitle}>{projectData.title}</strong>
+            <strong className={styles.projectTitle}>
+              <AnimatedCursor backLetters={4} speed={50}>
+                {projectData.title}
+              </AnimatedCursor>
+            </strong>
           </div>
           <div className={styles.yearCategoryContainer}>
             <span className={styles.projectYear}>{projectData.year}</span>
