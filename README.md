@@ -4,7 +4,7 @@ por: `Rafael Ramos` e `Felipe Scheffer`
 
 Seja bem-vindo a oficina construindo um Portfólio dinâmico com react.
 
-Link PPT Oficina: **[Canva - IF React - Semana acadêmica](#)**
+Link PPT Oficina: **[Canva - IF React - Semana acadêmica](https://www.canva.com/design/DAFwfiBf5js/VZjB-DA6PPTFaFrim89CMQ/edit?utm_content=DAFwfiBf5js&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)**
 
 ## Sumário
 
