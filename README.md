@@ -4,6 +4,8 @@ por: `Rafael Ramos` e `Felipe Scheffer`
 
 Seja bem-vindo a oficina construindo um Portfólio dinâmico com react.
 
+Link Figma: **[Figma - IF - Portfolio](https://www.figma.com/file/4F368xFZ1nIPLNHEZEkKOk/semana-academica-if-porfolio-projeto?type=design&node-id=0%3A1&mode=design&t=aQ59khJsUaU0FZEz-1)**
+
 Link PPT Oficina: **[Canva - IF React - Semana acadêmica](https://www.canva.com/design/DAFwfiBf5js/VZjB-DA6PPTFaFrim89CMQ/edit?utm_content=DAFwfiBf5js&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)**
 
 ## Sumário
